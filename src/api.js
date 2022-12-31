@@ -19,15 +19,5 @@ export const searchImages = async(searchValue,nextCursor)=>{
     }
     const response = await fetch(`${API_URL}/search?${params}`)
     const responseJson = await response.json()
-    return responseJson
-} 
-export const UploadImage = async(uploadValue)=>{
-    const params = new URLSearchParams()
-    params.append('expression',searchValue)
-    if (nextCursor) {
-        params.append('next_cursor',nextCursor)
-    }
-    const response = await fetch(`${API_URL}/search?${params}`)
-    const responseJson = await response.json()
-    return responseJson
-} 
+    return responseJson;
+}
